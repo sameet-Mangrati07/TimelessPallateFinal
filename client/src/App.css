@@ -1,0 +1,221 @@
+:root {
+    --foreground-rgb: 0, 0, 0;
+    --background-rgb: 255, 255, 255;
+}
+
+/* Reset all default margins and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+body {
+    color: rgb(var(--foreground-rgb));
+    background: rgb(var(--background-rgb));
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Remove any horizontal line effects */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    border-bottom: none;
+}
+
+/* Add these styles to ensure images are fully visible */
+section {
+    border-top: none;
+    border-bottom: none;
+    margin-top: 0;
+}
+
+/* Fixed header styles */
+header {
+    border-bottom: none;
+    box-shadow: none;
+    transition: all 0.3s ease;
+    height: auto;
+    z-index: 50;
+    margin: 0;
+    padding: 1rem;
+}
+
+/* Logo transformation on scroll - keep vertical stacking */
+.logo-container h1 {
+    transition: all 0.3s ease-out;
+}
+
+.logo-container.scrolled h1 {
+    font-size: 2.5rem;
+}
+
+.logo-container.scrolled h1 span {
+    display: block;
+    /* Keep stacked vertically */
+    line-height: 1;
+}
+
+/* Content container to ensure proper spacing */
+.content-container {
+    padding-top: 0;
+    margin-top: 0;
+}
+
+/* T-aligned container for precise alignment with the T in TIMELESS */
+.t-aligned-container {
+    position: relative;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+@media (min-width: 768px) {
+    .t-aligned-container {
+        margin-left: 0.5rem;
+    }
+}
+
+/* Ensure first section has proper spacing after the header */
+#page-1 {
+    padding-top: 0;
+    margin-top: 0;
+}
+
+/* Ensure other sections have proper spacing */
+#page-2,
+#page-3,
+#page-4,
+#page-5,
+#page-6 {
+    padding-top: 120px;
+    margin-top: 0;
+}
+
+/* Sliding gallery page specific styles */
+#page-7 {
+    padding-top: 120px;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* Exhibition page styles */
+#page-8 {
+    padding-top: 120px;
+    background-color: white;
+}
+
+/* Contact/Social page styles */
+#page-9 {
+    background-color: black;
+    color: white;
+    padding-top: 120px;
+}
+
+/* Sliding gallery styles */
+.sliding-row {
+    transition: transform 0.3s ease-out;
+}
+
+/* Enhanced rotating text styles */
+.rotating-text {
+    transform-origin: center;
+    backface-visibility: hidden;
+    /* Prevent flickering during animation */
+    perspective: 1000px;
+    /* Improve 3D rendering */
+}
+
+/* Make sure main container has no top margin or padding */
+main {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+/* Adjust other sections to account for fixed header */
+@media (min-width: 768px) {
+
+    #page-2,
+    #page-3,
+    #page-4,
+    #page-5,
+    #page-6,
+    #page-7,
+    #page-8,
+    #page-9 {
+        padding-top: 140px;
+    }
+}
+
+/* Ensure no white space at the top */
+body::before {
+    content: "";
+    display: none;
+}
+
+/* Remove any potential browser-specific top margins */
+body {
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+/* Ensure images in the first section touch the top */
+#page-1 .absolute.top-0 {
+    top: 0;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 640px) {
+    .logo-container h1 {
+        font-size: 2.5rem;
+    }
+
+    .logo-container.scrolled h1 {
+        font-size: 2rem;
+    }
+
+    header {
+        padding: 0.75rem;
+    }
+}
+
+/* Tablet-specific adjustments */
+@media (min-width: 641px) and (max-width: 1024px) {
+    .logo-container h1 {
+        font-size: 3rem;
+    }
+
+    .logo-container.scrolled h1 {
+        font-size: 2.25rem;
+    }
+}
+
+/* Ensure proper spacing on mobile */
+@media (max-width: 767px) {
+
+    #page-2,
+    #page-3,
+    #page-4,
+    #page-5,
+    #page-6,
+    #page-7,
+    #page-8,
+    #page-9 {
+        padding-top: 100px;
+    }
+}
