@@ -6,6 +6,7 @@ import Lenis from "lenis";
 import Contact from "./routes/users/contact/page";
 import Login from "./routes/users/login/page";
 import Shop from "./routes/users/shop/page";
+import About from "./routes/users/about/page";
 
 export default function App() {
   const lenis = new Lenis();
@@ -25,6 +26,7 @@ export default function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
         <Route path="/shop" element={<Shop />} />
+        <Route path="/about" element={<About />} />
       </Routes>
     </React.Fragment>
   );
